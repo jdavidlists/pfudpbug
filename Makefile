@@ -14,6 +14,9 @@ clean:
 test-client: all
 	./udp_client 23456 12345 172.16.0.1 172.16.0.2 172.16.0.3 172.16.0.4
 
+test-server: all
+	./udp_server 10.255.255.3 12345
+
 udp_client: ${CLIENT_OBJS}
 	${CC} -o $@ ${CLIENT_OBJS}
 
